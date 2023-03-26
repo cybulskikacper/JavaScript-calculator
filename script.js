@@ -14,7 +14,7 @@ let result = ''
 
 function displayNumbers() {
 	if (this.textContent === '.' && currentNumber.innerHTML.includes('.')) return
-	if (this.textContent === '.' && currentNumber.innerHTML === '.') 
+	if (this.textContent === '.' && currentNumber.innerHTML === '') return
 	currentNumber.innerHTML += this.textContent
 }
 
