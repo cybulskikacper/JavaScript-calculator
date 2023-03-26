@@ -18,7 +18,14 @@ function displayNumbers() {
 	currentNumber.innerHTML += this.textContent
 }
 
-function operate() {}
+function operate() {
+	if (currentNumber.innerHTML === '' && this.textContent === '-') {
+		currentNumber.innerHTML = '-'
+		return
+	} else if (currentNumber.innerHTML === '') { 
+		return
+	}
+}
 
 function showResult() {}
 
