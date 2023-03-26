@@ -13,7 +13,9 @@ const historyBtn = document.querySelector('.history-btn')
 let result = ''
 
 function displayNumbers() {
-
+	if (this.textContent === '.' && currentNumber.innerHTML.includes('.')) return
+	if (this.textContent === '.' && currentNumber.innerHTML === '.') 
+	currentNumber.innerHTML += this.textContent
 }
 
 function operate() {}
