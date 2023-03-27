@@ -21,10 +21,15 @@ function displayNumbers() {
 function operate() {
 	if (currentNumber.innerHTML === '' && this.textContent === '-') {
 		currentNumber.innerHTML = '-'
-		return
-	} else if (currentNumber.innerHTML === '') { 
+	} else if (currentNumber.innerHTML === '') {
 		return
 	}
+
+	// tu zapisany jest if
+
+	previousNumber.innerHTML = currentNumber.innerHTML
+	mathSign.innerHTML = this.textContent
+	currentNumber.innerHTML = ''
 }
 
 function showResult() {}
