@@ -76,7 +76,12 @@ function clearScreen() {
 	result = ''
 }
 
-function clearHistory() {}
+function clearHistory() {
+	calculatorHistory.textContent = ''
+	if (calculatorHistory.textContent === '') {
+		historyBtn.classList.remove('active')
+	}
+}
 
 numbersButton.forEach(button => {
 	button.addEventListener('click', displayNumbers)
