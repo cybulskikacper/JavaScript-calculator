@@ -32,7 +32,42 @@ function operate() {
 	currentNumber.innerHTML = ''
 }
 
-function showResult() {}
+function showResult() {
+	if (currentNumber.innerHTML === '' || previousNumber.innerHTML === '') return
+	let a = currentNumber.innerHTML
+	let b = previousNumber.innerHTML
+	let operator = mathSign.innerHTML
+
+	switch (operator) {
+		case '+':
+			result = a + b
+			break
+		case '-':
+			result = a - b
+			break
+		case 'x':
+			result = a * b
+			break
+		case ':':
+			result = a / b
+			break
+		case '2^':
+			result = a / b
+			break
+	}
+	addToHistory()
+	historyBtn.classList.add('active')
+	currentNumber.innerHTML = result
+	previousNumber.innerHTML = ''
+	mathSign.innerHTML = ''
+}
+
+function addToHistory() {
+	const newHistoryItem = document.createElement('li')
+	newHistoryItem.innerHTML = `${previousNumber.innerHTML} ${mathSign.innerHTML} ${currentNumber.innerHTML} = ${result}`
+	newHistoryItem.classList.add('history-item')
+	calculatorHistory.append(newHistoryItem)
+}
 
 function clearScreen() {}
 
