@@ -55,11 +55,17 @@ function showResult() {
 			result = a / b
 			break
 	}
+
 	addToHistory()
 	historyBtn.classList.add('active')
 	currentNumber.innerHTML = result
 	previousNumber.innerHTML = ''
 	mathSign.innerHTML = ''
+}
+function division() { 
+	if(currentNumber.innerHTML !== '' && previousNumber.innerHTML === '') {
+		
+	}
 }
 
 function addToHistory() {
