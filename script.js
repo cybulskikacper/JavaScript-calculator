@@ -69,7 +69,12 @@ function addToHistory() {
 	calculatorHistory.append(newHistoryItem)
 }
 
-function clearScreen() {}
+function clearScreen() {
+	currentNumber.innerHTML = ''
+	previousNumber.innerHTML = ''
+	mathSign.innerHTML = ''
+	result = ''
+}
 
 function clearHistory() {}
 
