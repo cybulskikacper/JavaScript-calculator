@@ -62,9 +62,8 @@ function showResult() {
 	previousNumber.innerHTML = ''
 	mathSign.innerHTML = ''
 }
-function division() { 
-	if(currentNumber.innerHTML !== '' && previousNumber.innerHTML === '') {
-		
+function division() {
+	if (currentNumber.innerHTML !== '' && previousNumber.innerHTML === '') {
 	}
 }
 
@@ -87,6 +86,7 @@ function clearHistory() {
 	if (calculatorHistory.textContent === '') {
 		historyBtn.classList.remove('active')
 	}
+	currentNumber.innerHTML = ''
 }
 
 numbersButton.forEach(button => {
